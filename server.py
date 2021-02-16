@@ -2,6 +2,10 @@ from flask import Flask, render_template, request, redirect
 import csv
 app = Flask(__name__)
 
+@app.route('/')
+def my_home():
+    return render_template('index.html')
+
 @app.route('/<string:page_name>')
 def home(page_name):
     return render_template(page_name)
@@ -30,7 +34,5 @@ def submit_form():
     else:
         return "there is no data"
 
-if __name__ == '__main__':
-    app.run()
 
 
