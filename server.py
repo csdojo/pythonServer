@@ -30,6 +30,7 @@ def submit_form():
     else:
         return "there is no data"
 
-
+if __name__ == '__main__':
+    app.run()
 
 
